@@ -1,0 +1,120 @@
+/*
+Primary
+#1769aa
+#2196f3
+#4dabf5
+
+Secondary
+----
+#00a152
+#00e676
+#33eb91
+
+*/
+
+*{box-sizing: border-box;}
+img{display: block;}
+.App{
+  display: flex;
+  flex-direction: row;
+  padding-left: 250px;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+  align-items: stretch;
+
+}
+
+.User-Panel{
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  flex: 1;
+  padding: 1rem;
+
+  padding: .5rem;
+  background: #1769aa;
+  color: #fff;
+  width: 250px;
+  text-shadow: 1px 1px #333;
+}
+
+.Users-List{
+  width: 100%;
+  background: #efefef;
+}
+
+.Invitations-List{
+  width: 250px;
+}
+
+
+.option-gender{
+  padding: .5rem;
+  border: 1px solid #ddd;
+  margin: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.option-gender:hover{
+  background: #333  ;
+}
+
+.option-gender--male,
+.option-gender--female{
+  text-shadow: 1px 1px 1px #111;
+}
+
+.option-gender--male,
+.option-gender--female{
+  text-shadow: 1px 1px 1px #111;
+}
+
+.option-nat{
+  cursor: pointer;
+  padding: .5rem;
+  border: 1px solid #ddd;
+  margin: 2px;
+}
+
+.user-list-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+}
+
+.Users-List{
+  padding: .75rem;
+}
+
+.user{
+  display: flex;
+  width: 100%;
+  margin: 1rem;
+  align-items: center;
+}
+
+.Invitations-Stats{
+  padding: .75rem;
+  width: 250px;
+  position: fixed;
+  top: 0; right: 0;
+  height: 100%;
+  background: #33eb91
+}
+
+.user__invite-btn{
+  width: 65px;
+  font-size: .75rem;
+  background: #fff;
+  border: 1px solid #333;
+  padding: .25rem;
+  margin-right: .5rem;
+}
+.user__img{
+  margin-right: .5rem;
+}
