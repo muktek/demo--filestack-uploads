@@ -11,7 +11,7 @@ class FilterPanel extends Component {
   render() {
     return (
       <div className="User-Panel">
-        <h2>Filter Users</h2>
+        <h2>Filter Panel</h2>
         <h4>Gender</h4>
           <span
             onClick={()=> this._handleGenderClick('all') }
