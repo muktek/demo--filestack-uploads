@@ -15,7 +15,7 @@ class UsersList extends Component {
       .map( (uData,i) => <User {...uData} appState={this.props.appState} key={i}/> )
     return (
       <div className="Users-List">
-        <h2>Users</h2>
+        <h2>Users List</h2>
         <div className="user-list-container">
           {userComponents}
         </div>
