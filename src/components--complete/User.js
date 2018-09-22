@@ -4,19 +4,14 @@ import PubSub from 'pubsub-js'
 
 class User extends Component {
   _toggleUserInviteStatus(thisUserEmail){
-    // // [c.3]
+    const updatedUserList = this.props.appState.usersList.map( u => {
+      if( u.email === thisUserEmail ){
+        u.invited = !u.invited
+      }
+      return u
+    })
 
-    // const updatedUserList = this.props.appState.usersList.map( u => {
-    //   if( u.email === thisUserEmail ){
-    //     u.invited = !u.invited
-    //   }
-    //   return u
-    // })
-
-    
-    // // [c.4]
-
-    // PubSub.publish('updateState', { usersList: updatedUserList} )
+    PubSub.publish('updateState', { usersList: updatedUserList} )
   }
 
   render() {

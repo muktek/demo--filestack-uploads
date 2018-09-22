@@ -7,11 +7,11 @@ class UsersList extends Component {
     const userList = this.props.appState.usersList
     const selectedGender = this.props.appState.selectedGender
     const userComponents = userList
-      // .filter( uData => { //  [c.2]
-      //   if(this.props.appState.selectedGender === 'all') return true
-      //   if(uData.gender === this.props.appState.selectedGender) return true
-      //   return false
-      // })        // [c.3]
+      .filter( uData => {
+        if(this.props.appState.selectedGender === 'all') return true
+        if(uData.gender === this.props.appState.selectedGender) return true
+        return false
+      })
       .map( (uData,i) => <User {...uData} appState={this.props.appState} key={i}/> )
     return (
       <div className="Users-List">

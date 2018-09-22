@@ -5,8 +5,7 @@ import PubSub from 'pubsub-js'
 class FilterPanel extends Component {
 
   _handleGenderClick(genderSelected){
-    //[c.1]
-    // PubSub.publish('updateState', { selectedGender : genderSelected  } )
+    PubSub.publish('updateState', { selectedGender : genderSelected  } )
   }
 
   render() {

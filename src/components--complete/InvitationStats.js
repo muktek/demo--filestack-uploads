@@ -3,14 +3,12 @@ import PubSub from 'pubsub-js'
 
 class InvitationStats extends Component {
   _handleUninviteAll(){
-    // // [c.6]
-    // const newListAllUninvited = this.props.appState.usersList.map( usr =>{
-    //   usr.invited = false
-    //   return usr
-    // })
+    const newListAllUninvited = this.props.appState.usersList.map( usr =>{
+      usr.invited = false
+      return usr
+    })
 
-    // // [c.7]
-    // PubSub.publish('updateState', {usersList: newListAllUninvited})
+    PubSub.publish('updateState', {usersList: newListAllUninvited})
 
   }
 
