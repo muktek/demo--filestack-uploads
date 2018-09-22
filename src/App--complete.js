@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './App.css'
 import data from './data/users.json'
 
-import FilterPanel from './components/FilterPanel'
-import UsersList from './components/UsersList'
-import InvitationStats from './components/InvitationStats'
+import FilterPanel from './components--complete/FilterPanel'
+import UsersList from './components--complete/UsersList'
+import InvitationStats from './components--complete/InvitationStats'
 
 import PubSub from 'pubsub-js'
 
@@ -18,7 +18,7 @@ class App extends Component {
     console.log(data.results);
 
     PubSub.subscribe('updateState', (evtName, data)=>{
-      if(typeof data !== 'object') return //no-op 
+      if(typeof data !== 'object') return //no-op
       this.setState(data)
     })
 
